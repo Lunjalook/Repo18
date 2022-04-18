@@ -6,7 +6,13 @@ let rockStar = new Map([
     ["singer", "Mick Jagger"],
 ]);
 
-let newRock = [...rockStar].filter(([k, v]) => k > "a");
+let newRock = new Map();
+
+for (let key of rockStar.entries()) {
+    if (key[0][0] > 'a') {
+        newRock.set(...key);
+    };
+}
+
 console.log(newRock);
-// Only change code above this line
 module.exports = { rockStar, newRock };
