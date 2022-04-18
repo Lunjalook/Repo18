@@ -6,15 +6,17 @@ let shoppingList = new Map([
     ["Carrot", 10],
     ["Apple", 1.5],
 ]);
-let arrKey = shoppingList.keys();
+let arrKey = [...shoppingList.keys()];
 for (let key of arrKey) {
-    console.log("groceries:  " + key);
+    console.log(`groceries: ${key}`);
 }
-let arrValue = shoppingList.values();
+let arrValue = [...shoppingList.values()];
 for (let value of arrValue) {
-    console.log("amount:  " + value);
+    console.log(`amount: ${value}`);
 }
-for (let value of shoppingList) console.log(value);
+for (let value of shoppingList) {
+    console.log(value);
+}
 // Only change code above this line
 
 module.exports = { shoppingList, arrKey, arrValue };
