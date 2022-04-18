@@ -37,8 +37,3 @@ console.log(...fifteenArray);
 // Only change code above this line
 module.exports = { fifteenArray, myGenerator }
 
-for (let i = 0; i <= 15; i++) {
-    fifteenArray.push(iterator.next().value);
-}
-
-console.log(fifteenArray);
